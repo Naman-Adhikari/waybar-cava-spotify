@@ -1,0 +1,83 @@
+{
+    // "layer": "top", // Waybar at top layer
+    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    // "height": 30, // Waybar height (to be removed for auto height)
+    "margin": "5 20 0 20",
+        // "width": 1280, // Waybar width
+        // Choose the order of the modules
+        "modules-left": ["custom/updates", "custom/spotify"],
+        "modules-center": ["clock", "custom/weather"],
+        "modules-right": ["custom/cava","pulseaudio", "backlight", "battery", "custom/ytube", "tray"],
+
+
+        //***************************
+        //*  Modules configuration  *
+        //***************************
+
+
+        "custom/updates": {
+            "format": "   ",
+            "interval": 7200,     
+            "on-click": "dolphin", 
+            "signal": 8
+        },
+
+		"custom/spotify": {
+		  "format": "  {}",
+		  "interval": 5,
+		  "on-click": "flatpak run com.spotify.Client",
+		  "exec": "~/.config/waybar/scripts/spotify.sh"
+		},
+
+       
+        "clock": {
+            "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+            "format": "{:%a | %d %b | %I:%M %p}"
+        },
+
+		"custom/cava": {
+				"format": "{}",
+				"exec": "~/.config/waybar/scripts/cava.sh"
+			},
+       
+        "pulseaudio": {
+            "reverse-scrolling": 1,
+            "format": "{volume}% {icon}",
+            "format-bluetooth": "{volume}% {icon} ",
+            "format-muted": " {format_source}",
+            "format-source-muted": "Mute 🚫",
+            "format-icons": {
+                "headphone": "",
+                "default": ["🕨", "🕩", "🕪"]
+            },
+            "on-click": "pavucontrol",
+            "min-length": 13,
+        },
+
+        "backlight": {
+            "device": "intel_backlight",
+            "format": "{percent}% {icon}",
+            "format-icons": ["🌑","🌒","🌓","🌔", "🌕"],
+            "min-length": 5,
+        },
+
+        "battery": {
+            "states": {
+                "warning": 30,
+                "critical": 15
+            },
+            "format": " {capacity}% {icon} ",
+            "format-charging": "{capacity}% ",
+            "format-plugged": "{capacity}% ",
+            "format-alt": "{time} {icon}",
+            "format-icons": ["▁", "▂", "▃", "▄", "▅"],
+            
+        },
+
+        "tray": {
+            "icon-size": 16,
+            "spacing": 4
+        },
+
+
+}

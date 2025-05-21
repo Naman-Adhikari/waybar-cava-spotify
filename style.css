@@ -1,0 +1,198 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: JetBrainsMono Nerd Font, monospace;
+    font-size: 15px;
+    min-height: 0px;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+#language {
+    padding-left: 16px;
+    padding-right: 8px;
+    border-radius: 10px 0px 0px 10px;
+    transition: none;
+    color: #ffffff;
+    background: #78979c;
+}
+
+#keyboard-state {
+    margin-right: 8px;
+    padding-right: 16px;
+    border-radius: 0px 10px 10px 0px;
+    transition: none;
+    color: #ffffff;
+    background: #383c4a;
+}
+
+#custom-updates {
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px 20px 5px 20px;
+    border: solid 3px;
+    border-color: #484a4a;
+    transition: background 0.3s ease,
+	border-radius 0.3s ease;
+    color: #ffffff;
+    background: #0f1c17;
+}
+
+#custom-updates:hover {
+	border-radius: 20px 5px 20px 5px;
+	background: #484a4a;
+}
+
+#custom-spotify {
+	margin-left: 8px;
+	padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px 20px 5px 20px;
+    border: solid 3px;
+    border-color: #484a4a;
+    transition: background 0.3s ease-in-out,
+	border-radius 0.3s ease-in-out;
+    color: #ffffff;
+    background: #0f1c17;
+}	
+
+#custom-spotify:hover {
+	border-radius: 20px 5px 20px 5px;
+	background: #484a4a;
+}
+
+#clock {
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 5px 5px 20px 20px;
+    border: solid 3px;
+    border-color: #484a4a;
+    transition: background 0.3s ease,
+	border-radius 0.3s ease;
+    color: #ffffff;
+    background: #0f1c17;
+}
+
+#clock:hover {
+	border-radius: 20px 20px 5px 5px;
+	background: #484a4a;
+}
+
+#custom-cava {
+	margin-right: 8px;
+}	
+
+
+#pulseaudio {
+    margin-right: 8px;
+    border-radius: 20px 5px 20px 5px;
+    border: solid 3px;
+    border-color: #484a4a;
+    transition: background 0.3s ease,
+	border-radius 0.3s ease;
+    color: #ffffff;
+    background: #0f1c17;
+}
+
+#pulseaudio:hover {
+	border-radius: 5px 20px 5px 20px;
+	background: #484a4a;
+}
+
+#backlight {
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 20px 5px 20px 5px;
+    border: solid 3px;
+    border-color: #484a4a;
+    transition: background 0.3s ease,
+	border-radius 0.3s ease;
+    color: #ffffff;
+    background: #0f1c17;
+}
+
+#backlight:hover {
+	border-radius: 5px 20px 5px 20px;
+	background: #484a4a;
+}
+
+
+#battery {
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 20px 5px 20px 5px;
+    border: solid 3px;
+    border-color: #484a4a;
+    transition: background 0.3s ease,
+	border-radius 0.3s ease;
+    color: #ffffff;
+    background: #0f1c17;
+}
+
+#battery:hover {
+	border-radius: 5px 20px 5px 20px;
+	background: #484a4a;
+}
+
+
+#battery.charging {
+    color: #ffffff;
+    /*background-color: #26A65B;*/
+    background-color: #0f1c17;
+    border: solid 3px;
+    border-color: #484a4a;
+}
+
+#battery.warning:not(.charging) {
+    background-color: #0f1c17;
+    color: #ff0000;
+    border-color: #ff0000;
+}
+
+#battery.critical:not(.charging) {
+    background-color: #0f1c17;
+    color: #ffffff;
+    border-color: #ad2626;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#tooltip {
+    background-color: #181818;
+}
+
+#tray {
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 20px 10px 10px 5px;
+    border: solid 3px;
+    border-color: #484a4a;
+    transition: background 0.3s ease,
+	border-radius 0.3s ease;
+    color: #ffffff;
+    background: #0f1c17;
+}
+
+#tray:hover {
+	border-radius: 5px 20px 5px 20px;
+	background: #484a4a;
+}
+
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #484a4a;
+    }
+}
