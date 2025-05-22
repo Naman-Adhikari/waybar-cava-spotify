@@ -1,0 +1,1 @@
+ghostty -e nmtui

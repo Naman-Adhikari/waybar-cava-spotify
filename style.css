@@ -2,7 +2,7 @@
     border: none;
     border-radius: 0;
     font-family: JetBrainsMono Nerd Font, monospace;
-    font-size: 15px;
+    font-size: 14px;
     min-height: 0px;
 }
 
@@ -12,24 +12,6 @@ window#waybar {
 
 window#waybar.hidden {
     opacity: 0.2;
-}
-
-#language {
-    padding-left: 16px;
-    padding-right: 8px;
-    border-radius: 10px 0px 0px 10px;
-    transition: none;
-    color: #ffffff;
-    background: #78979c;
-}
-
-#keyboard-state {
-    margin-right: 8px;
-    padding-right: 16px;
-    border-radius: 0px 10px 10px 0px;
-    transition: none;
-    color: #ffffff;
-    background: #383c4a;
 }
 
 #custom-updates {
@@ -67,6 +49,7 @@ window#waybar.hidden {
 	background: #484a4a;
 }
 
+
 #clock {
     padding-left: 16px;
     padding-right: 16px;
@@ -85,13 +68,33 @@ window#waybar.hidden {
 }
 
 #custom-cava {
-	margin-right: 8px;
+	margin-left: 8px;
 }	
 
+#network {
+	margin-right: 8px;
+	padding-right: 15px;
+	padding-left: 15px;
+	border-radius: 20px 5px 20px 5px;
+    border: solid 3px;
+    border-color: #484a4a;
+    transition: background 0.3s ease,
+	border-radius 0.3s ease;
+    color: #ffffff;
+    background: #0f1c17;
+}
+
+
+#network:hover {
+	border-radius: 5px 20px 5px 20px;
+	background: #484a4a;
+}
 
 #pulseaudio {
     margin-right: 8px;
     border-radius: 20px 5px 20px 5px;
+    padding-left: 0px;
+    padding-right: 0px;
     border: solid 3px;
     border-color: #484a4a;
     transition: background 0.3s ease,
@@ -107,8 +110,8 @@ window#waybar.hidden {
 
 #backlight {
     margin-right: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
     border-radius: 20px 5px 20px 5px;
     border: solid 3px;
     border-color: #484a4a;
@@ -126,8 +129,8 @@ window#waybar.hidden {
 
 #battery {
     margin-right: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 1px;
+    padding-right: 1px;
     border-radius: 20px 5px 20px 5px;
     border: solid 3px;
     border-color: #484a4a;
@@ -145,6 +148,8 @@ window#waybar.hidden {
 
 #battery.charging {
     color: #ffffff;
+	padding-right: 9px;
+	padding-left: 9px;
     /*background-color: #26A65B;*/
     background-color: #0f1c17;
     border: solid 3px;
