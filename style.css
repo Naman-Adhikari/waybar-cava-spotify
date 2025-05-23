@@ -180,6 +180,7 @@ window#waybar.hidden {
 #tray {
     padding-left: 16px;
     padding-right: 16px;
+	margin-right: 8px;
     border-radius: 20px 10px 10px 5px;
     border: solid 3px;
     border-color: #484a4a;
@@ -194,10 +195,27 @@ window#waybar.hidden {
 	background: #484a4a;
 }
 
+#custom-recorder {
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 20px 20px 20px 20px;
+	border: solid 3px;
+	border-color: #484a4a;
+    color: #ffffff;
+    background: #0f1c17;
+}
+
+#custom-recorder.recording {
+	animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
 
 @keyframes blink {
     to {
-        background-color: #ffffff;
+        background-color: #eb4034;
         color: #484a4a;
     }
 }

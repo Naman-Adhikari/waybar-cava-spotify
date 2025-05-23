@@ -2,7 +2,7 @@
     "margin": "5 20 0 20",
         "modules-left": ["custom/updates", "custom/spotify", "custom/cava"],
         "modules-center": ["clock"],
-        "modules-right": ["network","pulseaudio", "backlight", "battery", "custom/ytube", "tray"],
+        "modules-right": ["network","pulseaudio", "backlight", "battery", "custom/ytube", "tray", "custom/recorder"],
 
 
         //***************************
@@ -79,6 +79,17 @@
             "icon-size": 16,
             "spacing": 4
         },
+
+		
+	  "custom/recorder": {
+		"exec": "~/.config/waybar/scripts/record-status.sh",
+		"interval": 1,
+		"on-click": "~/.config/waybar/scripts/toggle-record.sh",
+		"return-type": "json"
+	  }
+	},
+
+
 
 
 }
